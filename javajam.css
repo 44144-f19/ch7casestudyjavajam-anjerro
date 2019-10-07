@@ -8,7 +8,8 @@ body { background-color: #FCEBB6;
 header { background-color: #D2B48C;
         height: 150px;
         background-image: url(javajamlogo.jpg);
-         background-repeat: no-repeat;		
+         background-repeat: no-repeat;
+    background-position: left;
 }
 h1 { padding-top: 45px;
     padding-left: 220px;
@@ -17,9 +18,9 @@ h1 { padding-top: 45px;
 h4 { background-color: #D2B48C;
     font-size: 1.2em;
 	padding-left:   .5em;   
-	padding-bottom: .25em;  
+	padding-bottom: 0;  
     text-transform: uppercase;
-    border-bottom: solid 2px #231814;
+    border-bottom: solid 2px #221811;
 	padding-bottom: 0;
 	clear: left;
 }
@@ -29,10 +30,11 @@ nav { text-align: center;
 	 padding-top: 10px;
 	 float: left;
 	 width: 200px;
+    padding-left: 5%;
 }
 nav a { text-decoration: none; }
 nav a:link { color: #FEF6C2; }
-nav a:visited { color: #D2B48C; }
+nav a:visited { color: #c4a277; }
 nav a:hover { color: #CC9933; }
 nav ul { list-style-type: none;
        padding-left: 0; }
@@ -42,8 +44,11 @@ main { padding: 0 0 2em 0;
 	  display: block;
 }
 main h2, main h3, main h4, main p, main div, main ul, main dl { padding-left: 3em; padding-right: 2em; }
+main h2, h3, h4, p, div, ul, dl {padding-left: 3em; padding-right: 2em;}
 
-footer { background-color: #D2B48C;
+footer { border-top: 2px solid #221811;
+    padding-bottom: 10px;
+    background-color: #D2B48C;
        font-size: .60em;
 	   font-style: italic;
 	   text-align: center;
@@ -54,7 +59,7 @@ footer { background-color: #D2B48C;
 		   background-color: #231814;
 		   min-width: 900px;
 		   max-width: 1280px;
-		   box-shadow: 3px 3px 3px #666666;
+		   box-shadow: 1px 1px 1px #221814;
 }
 .details { padding-left: 20%;
            padding-right: 20%;
@@ -64,15 +69,45 @@ img { padding-left: 10px;
      padding-right: 10px;
 }
 #heroroad { background-image: url(heroroad.jpg); 
-           background-size: 100% 100%;
-		   height: 250px; }
+           background-size: 100%;
+		   height: 175px;
+background-repeat: no-repeat;}
 #heromugs { background-image: url(heromugs.jpg); 
-           background-size: 100% 100%;
-		   height: 250px; }
+           background-size: 100%;
+		   height: 175px;
+background-repeat: no-repeat;}
 #heroguitar { background-image: url(heroguitar.jpg); 
-           background-size: 100% 100%;
-		   height: 250px; }
+           background-size: 100%;
+		   height: 175px;
+background-repeat: no-repeat;}
+
 .floatleft { float: left;
              padding-right: 2em;
 			 padding-bottom: 2em;
+}
+@media only screen and (max-width: 1024px) 
+{body {margin: 0; background-image: none;}
+    #wrapper {width: auto; min-width: 0; margin: 0; padding: 0; box-shadow: none;}
+    header { border-bottom: 5px solid #fef6c2;}
+    h1 {margin-top: 0; margin-bottom: 1em; padding-top: 1em; padding-bottom: 1em; font-size: 2.5em;}
+    nav { float: none; width: auto; padding-top: 0; margin: 10px; font-size: 1.3em;}
+    nav li { display: inline-block;}
+    nav a {padding: 1em; width: 8em; font-weight: bold; border-style: none;}
+    nav ul { padding: 0; margin: 0;}
+    #heroroad, #heromugs, #heroguitar { padding: 0; margin: 0;}
+    main { margin: 0; font-size: 90%;}
+}
+@media only screen and (max-width: 768px) 
+    {header { background-image: url(pictures/javajammini.jpg); height: 128px; }
+    h1 { font-size: 2em; text-align: center; padding-left: 0; }
+    nav { margin: 0; }
+    nav a { display: block; padding: 0.2em; width: auto; border-bottom: 1px solid #fef6c2; }
+    nav li { display: block; }
+    main { padding-top: 1px; }
+    h2 { padding-top: 0.5em; padding-right: 0; padding-bottom: 0; padding-left: 0.5em; margin-right: 0.5em; }
+    .details { padding-left: 0; padding-right: 0; }
+    #heroroad, #heromugs, #heroguitar { background-image: none; height: auto; }
+    .floatleft { padding-left: 0.5em; padding-right: 0.5em }       
+        #mobile {display: incline; }
+        #desktop {display: none; }
 }
